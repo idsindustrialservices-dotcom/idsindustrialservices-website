@@ -1,0 +1,1 @@
+Upload all files and the assets folder to the repository root. Cloudflare Pages: Framework None, build command blank, output directory .
