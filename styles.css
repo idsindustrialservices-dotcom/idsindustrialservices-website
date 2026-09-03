@@ -32,3 +32,42 @@
     background-size:cover;
   }
 }
+/* MOBILE IMAGE FIXES */
+
+@media(max-width:1050px){
+
+  .about-image{
+    display:block;
+    min-height:300px;
+    background-position:center;
+    background-size:cover;
+  }
+
+}
+
+
+@media(max-width:720px){
+
+  .hero-image{
+    inset:0;
+    opacity:.55;
+    background-position:center;
+    background-size:cover;
+  }
+
+
+  .specialty-image{
+    min-height:300px;
+    background-position:center;
+    background-size:cover;
+  }
+
+
+  .about-image{
+    display:block;
+    min-height:280px;
+    background-position:center;
+    background-size:cover;
+  }
+
+}
