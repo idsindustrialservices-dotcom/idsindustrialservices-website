@@ -12,12 +12,40 @@ document.addEventListener('DOMContentLoaded',()=>{
     });
     nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('is-open');button.setAttribute('aria-expanded','false');if(window.innerWidth<=820)nav.style.display='none';}));
   }
+
+  /* Keep exactly one approved IDS logo per brand. The approved PNG already
+     contains the complete horizontal logo, so do not create a second logo. */
   document.querySelectorAll('.brand').forEach(brand=>{
-    if(!brand.querySelector('.ids-approved-logo')){
-      const img=document.createElement('img');img.className='ids-approved-logo';img.src='assets/images/ids-logo-approved.png';img.alt='Ideal Solution Industrial Services';img.width=54;img.height=54;
-      const oldMark=brand.querySelector('.logo-mark');if(oldMark)oldMark.remove();brand.prepend(img);
+    const logo=brand.querySelector('img');
+    const oldMark=brand.querySelector('.logo-mark');
+    if(oldMark) oldMark.remove();
+
+    if(logo){
+      logo.classList.add('ids-approved-logo');
+      logo.alt='Ideal Solution Industrial Services';
+      logo.removeAttribute('width');
+      logo.removeAttribute('height');
+    }else{
+      const img=document.createElement('img');
+      img.className='ids-approved-logo';
+      img.src='assets/images/ids-logo-approved.png';
+      img.alt='Ideal Solution Industrial Services';
+      brand.prepend(img);
+    }
+
+    const brandCopy=brand.querySelector('.brand-copy');
+    if(brandCopy) brandCopy.style.display='none';
+
+    const style=logo||brand.querySelector('.ids-approved-logo');
+    if(style){
+      style.style.width='min(220px,62vw)';
+      style.style.height='auto';
+      style.style.maxHeight='58px';
+      style.style.objectFit='contain';
+      style.style.objectPosition='left center';
     }
   });
+
   const params=new URLSearchParams(window.location.search);
   if(params.get('sent')==='1'){
     const message=document.createElement('div');message.className='form-success';message.textContent='Thank you. Your service request has been sent. IDS will review your information and contact you.';
