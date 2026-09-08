@@ -1,14 +1,50 @@
-const b=document.querySelector('.menu-btn'),n=document.querySelector('.nav-links');if(b&&n)b.addEventListener('click',()=>{const o=n.dataset.open==='1';n.dataset.open=o?'0':'1';if(o)n.style.display='none';else{Object.assign(n.style,{display:'flex',position:'absolute',left:'14px',right:'14px',top:'70px',flexDirection:'column',alignItems:'stretch',gap:'0',padding:'12px 18px',background:'#080a0c',border:'1px solid rgba(230,170,32,.35)'});[...n.querySelectorAll('a')].forEach(a=>a.style.padding='11px 0')}});
+document.addEventListener('DOMContentLoaded', () => {
+  const menuButton = document.querySelector('.menu-btn');
+  const nav = document.querySelector('.nav-links');
 
-document.querySelectorAll('.quote-form').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();const f=new FormData(form),s=encodeURIComponent(`IDS Service Request - ${f.get('company')||f.get('name')||'Website'}`),m=encodeURIComponent(`Name: ${f.get('name')||''}\nCompany: ${f.get('company')||''}\nPhone: ${f.get('phone')||''}\nEmail: ${f.get('email')||''}\nService: ${f.get('service')||''}\nMachine / Model: ${f.get('machine')||''}\nLocation: ${f.get('location')||''}\n\nIssue / Request:\n${f.get('message')||''}`);location.href=`mailto:idsindustrialservices@gmail.com?subject=${s}&body=${m}`}));
+  // Mobile navigation
+  if (menuButton && nav) {
+    menuButton.setAttribute('aria-expanded', 'false');
 
-document.querySelectorAll('.brand').forEach(brand=>{brand.querySelectorAll('.ids-approved-logo').forEach(el=>el.remove());const img=document.createElement('img');img.className='ids-approved-logo';img.src='assets/images/ids-logo-approved.png';img.alt='Ideal Solution';img.width=54;img.height=54;brand.prepend(img);});
+    menuButton.addEventListener('click', () => {
+      const open = nav.classList.toggle('is-open');
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.textContent = open ? 'CLOSE' : 'MENU';
+    });
 
-const fix=document.createElement('style');fix.textContent=`
-.brand{gap:12px!important}.brand .logo-mark{display:none!important}.brand .brand-copy{display:block!important}.brand::before{content:none!important;display:none!important}.ids-approved-logo{display:block!important;width:54px!important;height:54px!important;object-fit:contain!important;flex:0 0 54px!important}.footer .ids-approved-logo{width:54px!important;height:54px!important;flex-basis:54px!important}
-.hero h1{margin-bottom:18px!important}.hero h1::before,.hero h1::after{content:none!important;display:none!important}.experience-highlight{margin:4px 0 14px;font-size:18px;font-weight:900;letter-spacing:.055em;color:#fff;text-transform:uppercase}.experience-highlight strong{color:var(--gold2);font-size:21px}
-.hero-image{inset:0 0 0 0!important;opacity:.7!important}.hero:before{background:linear-gradient(90deg,#07090b 0%,rgba(7,9,11,.96) 20%,rgba(7,9,11,.78) 45%,rgba(7,9,11,.35) 75%,rgba(7,9,11,.15) 100%)!important}.hero-content{max-width:620px!important;margin-left:4%!important}
-@media(max-width:720px){.hero-image{opacity:.35!important}.hero-content{margin-left:0!important}}
-`;
-document.head.appendChild(fix);
-const heroTitle=document.querySelector('.hero h1');if(heroTitle){document.querySelectorAll('.experience-highlight').forEach((el,i)=>{if(i>0)el.remove()});if(!document.querySelector('.experience-highlight')){const exp=document.createElement('div');exp.className='experience-highlight';exp.innerHTML='<strong>26+ YEARS</strong> OF INDUSTRIAL EXPERIENCE';heroTitle.insertAdjacentElement('afterend',exp);}}
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('is-open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.textContent = 'MENU';
+      });
+    });
+  }
+
+  // Use exactly one approved IDS logo in every brand link.
+  // This replaces the old icon + text combination that caused the logo to appear twice.
+  document.querySelectorAll('.brand').forEach(brand => {
+    brand.querySelectorAll('.logo-mark, .brand-copy, .ids-approved-logo').forEach(el => el.remove());
+
+    const img = document.createElement('img');
+    img.className = 'ids-approved-logo';
+    img.src = 'assets/images/ids-logo-approved.svg';
+    img.alt = 'Ideal Solution Industrial Services';
+    img.width = 285;
+    img.height = 57;
+    img.loading = 'eager';
+    img.decoding = 'async';
+    brand.appendChild(img);
+  });
+
+  // Smoothly close the mobile menu when resizing back to desktop.
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 720 && nav) {
+      nav.classList.remove('is-open');
+      if (menuButton) {
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.textContent = 'MENU';
+      }
+    }
+  });
+});
