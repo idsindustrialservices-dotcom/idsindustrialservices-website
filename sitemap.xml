@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://idsindustrialservices.com/</loc></url>
-<url><loc>https://idsindustrialservices.com/services.html</loc></url>
-<url><loc>https://idsindustrialservices.com/packaging-machinery.html</loc></url>
-<url><loc>https://idsindustrialservices.com/about.html</loc></url>
-<url><loc>https://idsindustrialservices.com/contact.html</loc></url>
-<url><loc>https://idsindustrialservices.com/privacy.html</loc></url>
-<url><loc>https://idsindustrialservices.com/terms.html</loc></url>
+<url><loc>https://idsindustrialservices.com/</loc><priority>1.0</priority></url>
+<url><loc>https://idsindustrialservices.com/services.html</loc><priority>0.9</priority></url>
+<url><loc>https://idsindustrialservices.com/packaging-machinery.html</loc><priority>0.9</priority></url>
+<url><loc>https://idsindustrialservices.com/industrial-maintenance.html</loc><priority>0.9</priority></url>
+<url><loc>https://idsindustrialservices.com/plc-controls.html</loc><priority>0.9</priority></url>
+<url><loc>https://idsindustrialservices.com/servo-vfd-troubleshooting.html</loc><priority>0.9</priority></url>
+<url><loc>https://idsindustrialservices.com/industrial-electrical-troubleshooting.html</loc><priority>0.9</priority></url>
+<url><loc>https://idsindustrialservices.com/pneumatics-hydraulics.html</loc><priority>0.8</priority></url>
+<url><loc>https://idsindustrialservices.com/preventive-maintenance.html</loc><priority>0.9</priority></url>
+<url><loc>https://idsindustrialservices.com/emergency-industrial-service.html</loc><priority>0.9</priority></url>
+<url><loc>https://idsindustrialservices.com/vffs-machine-service.html</loc><priority>0.9</priority></url>
+<url><loc>https://idsindustrialservices.com/flow-pack-machine-service.html</loc><priority>0.9</priority></url>
+<url><loc>https://idsindustrialservices.com/stick-pack-machine-service.html</loc><priority>0.8</priority></url>
+<url><loc>https://idsindustrialservices.com/filling-dosing-equipment-service.html</loc><priority>0.8</priority></url>
+<url><loc>https://idsindustrialservices.com/conveyor-service.html</loc><priority>0.8</priority></url>
+<url><loc>https://idsindustrialservices.com/industries.html</loc><priority>0.8</priority></url>
+<url><loc>https://idsindustrialservices.com/about.html</loc><priority>0.7</priority></url>
+<url><loc>https://idsindustrialservices.com/contact.html</loc><priority>0.9</priority></url>
+<url><loc>https://idsindustrialservices.com/privacy.html</loc><priority>0.2</priority></url>
+<url><loc>https://idsindustrialservices.com/terms.html</loc><priority>0.2</priority></url>
 </urlset>
