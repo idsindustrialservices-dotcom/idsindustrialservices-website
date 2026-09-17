@@ -1,0 +1,17 @@
+# Preserve old URLs while consolidating pages at the site root.
+/IDS_26_Years_Update / 301
+/IDS_26_Years_Update/ / 301
+/IDS_26_Years_Update/about.html /about 301
+/IDS_26_Years_Update/about /about 301
+/IDS_26_Years_Update/contact.html /contact 301
+/IDS_26_Years_Update/contact /contact 301
+/IDS_26_Years_Update/index.html / 301
+/IDS_26_Years_Update/index / 301
+/IDS_26_Years_Update/packaging-machinery.html /packaging-machinery 301
+/IDS_26_Years_Update/packaging-machinery /packaging-machinery 301
+/IDS_26_Years_Update/privacy.html /privacy 301
+/IDS_26_Years_Update/privacy /privacy 301
+/IDS_26_Years_Update/services.html /services 301
+/IDS_26_Years_Update/services /services 301
+/IDS_26_Years_Update/terms.html /terms 301
+/IDS_26_Years_Update/terms /terms 301

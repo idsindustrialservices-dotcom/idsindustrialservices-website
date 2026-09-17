@@ -1,0 +1,1 @@
+Packaging gallery images are intentionally displayed at intrinsic aspect ratio to prevent stretching.
