@@ -12,21 +12,21 @@ document.addEventListener('DOMContentLoaded',()=>{
     });
     nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('is-open');button.setAttribute('aria-expanded','false');if(window.innerWidth<=820)nav.style.display='none';}));
   }
-
-  /* The HTML already contains the approved IDS mark + wordmark text.
-     Do not create, remove, hide, or resize the brand elements with JS. */
   document.querySelectorAll('.brand').forEach(brand=>{
     const logo=brand.querySelector('img');
     const oldMark=brand.querySelector('.logo-mark');
     if(oldMark) oldMark.remove();
     if(logo){
+      logo.src='assets/images/ids-logo-approved.svg';
+      logo.removeAttribute('width');
+      logo.removeAttribute('height');
       logo.classList.add('ids-approved-logo');
       logo.alt='Ideal Solution Industrial Services';
+      logo.setAttribute('decoding','async');
     }
     const brandCopy=brand.querySelector('.brand-copy');
-    if(brandCopy) brandCopy.style.display='';
+    if(brandCopy) brandCopy.style.display='none';
   });
-
   const params=new URLSearchParams(window.location.search);
   if(params.get('sent')==='1'){
     const message=document.createElement('div');message.className='form-success';message.textContent='Thank you. Your service request has been sent. IDS will review your information and contact you.';
