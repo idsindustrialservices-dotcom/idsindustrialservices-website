@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 370" role="img" aria-labelledby="title desc">
+<title id="title">Ideal Solution IS emblem</title>
+<desc id="desc">Gold circular IS emblem for Ideal Solution Industrial Services</desc>
+<defs>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+<stop stop-color="#fff0a3"/>
+<stop offset=".28" stop-color="#ffc84d"/>
+<stop offset=".55" stop-color="#d99a18"/>
+<stop offset=".78" stop-color="#ffe17a"/>
+<stop offset="1" stop-color="#b8730c"/>
+</linearGradient>
+</defs>
+<path fill="url(#gold)" fill-rule="evenodd" d="M 364,206 L 315,158 L 232,158 L 232,198 L 301,198 L 320,216 L 322,222 L 311,247 L 301,262 L 281,283 L 260,298 L 231,311 L 208,316 L 182,317 L 164,315 L 137,307 L 122,300 L 100,285 L 76,260 L 64,241 L 59,228 L 13,184 L 13,197 L 16,216 L 23,241 L 36,268 L 54,293 L 78,316 L 107,335 L 142,349 L 176,355 L 202,355 L 237,349 L 266,338 L 297,319 L 324,294 L 342,269 L 355,242 Z M 117,81 L 117,122 L 167,123 L 168,181 L 167,233 L 117,234 L 117,274 L 261,274 L 261,234 L 211,233 L 211,123 L 261,122 L 261,81 Z M 16,150 L 65,198 L 147,198 L 147,158 L 80,158 L 59,138 L 60,132 L 68,115 L 81,96 L 92,84 L 115,66 L 134,56 L 154,49 L 177,45 L 203,45 L 222,48 L 244,55 L 265,66 L 280,77 L 299,96 L 311,113 L 316,124 L 365,171 L 361,139 L 352,112 L 340,89 L 318,61 L 294,40 L 261,21 L 235,12 L 207,7 L 174,7 L 142,13 L 115,23 L 89,38 L 66,57 L 43,84 L 26,115 Z"/>
+</svg>
