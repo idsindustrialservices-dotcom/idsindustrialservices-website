@@ -2,18 +2,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   const button=document.querySelector('.menu-btn'),nav=document.querySelector('.nav-links');
   if(button&&nav){button.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');button.setAttribute('aria-expanded',String(open));if(open){Object.assign(nav.style,{display:'flex',position:'absolute',left:'14px',right:'14px',top:'68px',flexDirection:'column',alignItems:'stretch',gap:'0',padding:'12px 18px',background:'#080a0c',border:'1px solid rgba(230,170,32,.35)',zIndex:'60'});nav.querySelectorAll('a').forEach(a=>a.style.padding='11px 0')}else if(window.innerWidth<=820)nav.style.display='none'});nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('is-open');button.setAttribute('aria-expanded','false');if(window.innerWidth<=820)nav.style.display='none'}))}
 
-  /* Use the approved IS emblem as the mark and keep the real IDEAL SOLUTION wordmark beside it. */
-  document.querySelectorAll('.brand').forEach(brand=>{
-    brand.querySelectorAll('.ids-approved-logo,.logo-mark,.brand-mark').forEach(el=>el.remove());
-    const img=document.createElement('img');
-    img.className='ids-approved-logo';
-    img.src='assets/images/ids-logo-mark.svg';
-    img.alt='Ideal Solution Industrial Services';
-    img.width=54; img.height=54; img.decoding='async';
-    brand.prepend(img);
-    const copy=brand.querySelector('.brand-copy');
-    if(copy) copy.style.display='block';
-  });
+  /* Do not modify the approved header lockup. Each page already contains the correct logo image and wordmark. */
 
   const canonical=document.querySelector('link[rel="canonical"]');
   const canonicalUrl=canonical?.href||window.location.href.split('#')[0].split('?')[0];
