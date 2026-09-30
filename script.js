@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(!document.head.querySelector('script[data-ids-breadcrumbs]')&&location.pathname!=='/'&&!location.pathname.endsWith('/index.html')){
     const path=location.pathname.split('/').filter(Boolean).pop()||'';
     const label=(document.querySelector('.page-hero h1')?.textContent||document.title||path).replace(/\\s+/g,' ').trim();
-    const data={'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':new URL('index.html',canonicalUrl).href},{'@type':'ListItem','position':2,'name':label,'item':canonicalUrl}]};
+    const data={'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':new URL('/',canonicalUrl).href},{'@type':'ListItem','position':2,'name':label,'item':canonicalUrl}]};
     const node=document.createElement('script');node.type='application/ld+json';node.dataset.idsBreadcrumbs='true';node.textContent=JSON.stringify(data);document.head.appendChild(node)
   }
   const params=new URLSearchParams(window.location.search);
