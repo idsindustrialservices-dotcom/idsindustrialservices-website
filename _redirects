@@ -1,21 +1,25 @@
 # Preserve old URLs while consolidating pages at the site root.
 /IDS_26_Years_Update / 301
 /IDS_26_Years_Update/ / 301
-/IDS_26_Years_Update/about.html /about.html 301
-/IDS_26_Years_Update/about /about.html 301
-/IDS_26_Years_Update/contact.html /contact.html 301
-/IDS_26_Years_Update/contact /contact.html 301
+/IDS_26_Years_Update/about.html /about 301
+/IDS_26_Years_Update/about /about 301
+/IDS_26_Years_Update/contact.html /contact 301
+/IDS_26_Years_Update/contact /contact 301
 /IDS_26_Years_Update/index.html / 301
 /IDS_26_Years_Update/index / 301
-/IDS_26_Years_Update/packaging-machinery.html /packaging-machinery.html 301
-/IDS_26_Years_Update/packaging-machinery /packaging-machinery.html 301
-/IDS_26_Years_Update/privacy.html /privacy.html 301
-/IDS_26_Years_Update/privacy /privacy.html 301
-/IDS_26_Years_Update/services.html /services.html 301
-/IDS_26_Years_Update/services /services.html 301
-/IDS_26_Years_Update/terms.html /terms.html 301
-/IDS_26_Years_Update/terms /terms.html 301
+/IDS_26_Years_Update/packaging-machinery.html /packaging-machinery 301
+/IDS_26_Years_Update/packaging-machinery /packaging-machinery 301
+/IDS_26_Years_Update/privacy.html /privacy 301
+/IDS_26_Years_Update/privacy /privacy 301
+/IDS_26_Years_Update/services.html /services 301
+/IDS_26_Years_Update/services /services 301
+/IDS_26_Years_Update/terms.html /terms 301
+/IDS_26_Years_Update/terms /terms 301
 
-/kissimmee-industrial-maintenance.html /industrial-maintenance-kissimmee.html 301
-/davenport-industrial-maintenance.html /industrial-maintenance-davenport.html 301
-/lakeland-industrial-maintenance.html /industrial-maintenance-lakeland.html 301
+/kissimmee-industrial-maintenance.html /industrial-maintenance-kissimmee 301
+/davenport-industrial-maintenance.html /industrial-maintenance-davenport 301
+/lakeland-industrial-maintenance.html /industrial-maintenance-lakeland 301
+# Cover extensionless aliases as well as the original .html URLs.
+/lakeland-industrial-maintenance /industrial-maintenance-lakeland 301
+/kissimmee-industrial-maintenance /industrial-maintenance-kissimmee 301
+/davenport-industrial-maintenance /industrial-maintenance-davenport 301
