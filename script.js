@@ -28,5 +28,5 @@ document.addEventListener('DOMContentLoaded',()=>{
     const node=document.createElement('script');node.type='application/ld+json';node.dataset.idsBreadcrumbs='true';node.textContent=JSON.stringify(data);document.head.appendChild(node)
   }
   const params=new URLSearchParams(window.location.search);
-  if(params.get('sent')==='1'){const message=document.createElement('div');message.className='form-success';message.textContent='Thank you. Your service request has been sent. IDS will review your information and contact you.';const form=document.querySelector('.form');if(form)form.parentNode.insertBefore(message,form)}
+  if(params.get('sent')==='1'){const message=document.createElement('div');message.className='form-success';message.textContent=location.pathname.includes('machine-quote')?'Thank you. Your packaging machine quote request has been sent. IDS will review your project information and contact you.':'Thank you. Your service request has been sent. IDS will review your information and contact you.';const form=document.querySelector('.form');if(form)form.parentNode.insertBefore(message,form)}
 });
