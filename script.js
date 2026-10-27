@@ -28,5 +28,10 @@ document.addEventListener('DOMContentLoaded',()=>{
     const node=document.createElement('script');node.type='application/ld+json';node.dataset.idsBreadcrumbs='true';node.textContent=JSON.stringify(data);document.head.appendChild(node)
   }
   const params=new URLSearchParams(window.location.search);
-  if(params.get('sent')==='1'){const message=document.createElement('div');message.className='form-success';message.textContent=location.pathname.includes('machine-quote')?'Thank you. Your packaging machine quote request has been sent. IDS will review your project information and contact you.':'Thank you. Your service request has been sent. IDS will review your information and contact you.';const form=document.querySelector('.form');if(form)form.parentNode.insertBefore(message,form)}
+  if(params.get('sent')==='1'){
+    // Measurement hook for a confirmed redirect to the existing thank-you state.
+    // Google Tag Manager/GA4 must be installed separately to collect this event.
+    window.dataLayer=window.dataLayer||[];
+    window.dataLayer.push({event:'ids_form_success',form_type:location.pathname.includes('machine-quote')?'machine_quote':'service_request'});
+const message=document.createElement('div');message.className='form-success';message.textContent=location.pathname.includes('machine-quote')?'Thank you. Your packaging machine quote request has been sent. IDS will review your project information and contact you.':'Thank you. Your service request has been sent. IDS will review your information and contact you.';const form=document.querySelector('.form');if(form)form.parentNode.insertBefore(message,form)}
 });
